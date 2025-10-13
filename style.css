@@ -118,7 +118,7 @@ body {
 /* 4. HERO SECTION (Banner Chính) */
 /* -------------------------------------- */
 .hero-section {
-    background: url('images/thay kien.jpg') no-repeat center center/cover;
+    background: url('path/to/z7105153784982_7da3bfec77565a078c4ae7aad7449899.jpg') no-repeat center center/cover;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -420,3 +420,4 @@ body {
     }
 
 }
+
