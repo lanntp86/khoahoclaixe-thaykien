@@ -298,6 +298,20 @@ body {
     color: var(--color-primary);
     font-weight: 500;
 }
+.video-container {
+    max-width: 800px; /* GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
+    margin: 40px auto; /* Canh giữa và tạo khoảng cách */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    width: 100%; /* Bắt buộc video chiếm 100% của khung chứa (800px) */
+    height: auto;
+    display: block;
+}
+
 
 /* -------------------------------------- */
 /* 7. LIÊN HỆ & FORM */
@@ -420,4 +434,5 @@ body {
     }
 
 }
+
 
