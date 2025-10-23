@@ -183,6 +183,7 @@ section {
 /* -------------------------------------- */
 .videos-section {
     background-color: var(--color-white);
+    padding: 90px 0; /* Đã tăng chiều cao lên 1.5 lần */
 }
 
 .video-grid {
@@ -195,16 +196,17 @@ section {
 
 .video-item {
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background-color: var(--color-light-bg); /* Thêm màu nền nhạt để làm nổi bật khung */
     border-radius: 8px;
-    overflow: hidden;
-    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    /* Thêm padding xung quanh nội dung bên trong (trừ video responsive) */
+    padding: 10px;
 }
 
 .video-caption {
     font-size: 1em;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 5px;
     color: var(--color-primary);
 }
 
@@ -482,6 +484,7 @@ section {
         margin: 10px 0;
     }
 }
+
 
 
 
