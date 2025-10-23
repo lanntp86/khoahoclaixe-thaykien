@@ -185,15 +185,30 @@ section {
     background-color: var(--color-white);
 }
 
-.video-container {
-    max-width: 900px; /* Giới hạn chiều rộng video */
-    margin: 0px auto 40px auto; 
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.video-grid {
+    display: grid;
+    /* Hiển thị tối đa 4 cột, mỗi cột tự điều chỉnh kích thước tối thiểu 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; /* Khoảng cách giữa các video */
+    margin-bottom: 40px;
 }
 
-/* CSS Cho YouTube Responsive - Cực kỳ quan trọng */
+.video-item {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.video-caption {
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--color-primary);
+}
+
+/* CSS Cho YouTube Responsive (GIỮ NGUYÊN) */
 .youtube-responsive-container {
     position: relative;
     padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
@@ -209,13 +224,6 @@ section {
     height: 100%;
     border: none;
 }
-.video-cta {
-    margin-top: 30px;
-}
-.text-center {
-    text-align: center;
-}
-
 
 /* -------------------------------------- */
 /* 7. GIỚI THIỆU THẦY KIÊN (PHẦN 4 MỚI) */
@@ -474,6 +482,7 @@ section {
         margin: 10px 0;
     }
 }
+
 
 
 
