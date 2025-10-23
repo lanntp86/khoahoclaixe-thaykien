@@ -485,18 +485,8 @@ section {
     }
 }
 
-/* -------------------------------------- */
-/* 12. TÙY CHỈNH TỶ LỆ KHUNG HÌNH */
-/* -------------------------------------- */
 
-/* Class này dùng để ép khung video theo tỷ lệ DỌC (9:16) */
-.ratio-vertical {
-    padding-bottom: 177.77%; /* Tỷ lệ 9:16 (16/9 = 1.7777) */
-}
 
-/* Class này dùng cho video NGANG chuẩn (16:9) */
-/* (Không cần thay đổi, chỉ để tham khảo) */
-/* .youtube-responsive-container hiện tại đang là 16:9 (56.25%) */
 
 
 
