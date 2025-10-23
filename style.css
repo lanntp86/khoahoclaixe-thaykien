@@ -40,6 +40,7 @@ body {
     transition: background-color 0.3s;
     text-transform: uppercase;
     font-size: 1em;
+    text-align: center;
 }
 
 .btn-hotline {
@@ -48,7 +49,7 @@ body {
     border: 2px solid var(--color-primary);
 }
 
-.btn-cta-header, .btn-cta-main, .btn-cta-submit {
+.btn-cta-header, .btn-cta-main, .btn-cta-submit, .btn-cta-docs {
     background: var(--color-secondary);
     color: var(--color-primary);
     border: none;
@@ -64,7 +65,7 @@ body {
 }
 
 /* -------------------------------------- */
-/* 3. HEADER (Màu Đỏ Chủ đạo) */
+/* 3. HEADER & NAVIGATION */
 /* -------------------------------------- */
 .main-header {
     background-color: var(--color-primary);
@@ -76,9 +77,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Cho responsive */
+    flex-wrap: wrap; 
 }
-
 .logo h1 {
     font-size: 1.8em;
     font-weight: 900;
@@ -88,7 +88,6 @@ body {
     font-size: 0.8em;
     opacity: 0.8;
 }
-
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -99,15 +98,10 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
 }
-.main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
 .header-contact {
     display: flex;
     gap: 10px;
 }
-/* Sticky Header */
 .main-header.sticky {
     position: sticky;
     top: 0;
@@ -118,7 +112,8 @@ body {
 /* 4. HERO SECTION (Banner Chính) */
 /* -------------------------------------- */
 .hero-section {
-    background: url('path/to/z7105153784982_7da3bfec77565a078c4ae7aad7449899.jpg') no-repeat center center/cover;
+    /* Đã sửa lỗi đường dẫn ảnh Banner */
+    background: url('images/banner-vios.jpg') no-repeat center center/cover;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -134,7 +129,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Lớp phủ đen */
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content {
@@ -165,75 +160,65 @@ body {
 
 
 /* -------------------------------------- */
-/* 5. KHU VỰC KHÓA HỌC */
+/* 5. CÁC PHẦN CHUNG (Sections & Titles) */
 /* -------------------------------------- */
-.courses-section {
+section {
     padding: 60px 0;
 }
 .section-title {
     text-align: center;
     font-size: 2em;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     color: var(--color-primary);
 }
-.course-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
 }
 
-.course-card {
-    background-color: var(--color-white);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.3s;
-}
-.course-card:hover {
-    transform: translateY(-5px);
-}
-.featured-card {
-    border: 4px solid var(--color-secondary);
-    background-color: var(--color-light-bg);
-}
-.course-card h4 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    color: var(--color-primary);
-}
-.course-card .price {
-    font-size: 1.8em;
-    color: var(--color-primary);
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-.course-card .features {
-    list-style: none;
-    text-align: left;
-    margin-top: 15px;
-}
-.course-card .features li {
-    padding: 5px 0;
-    border-bottom: 1px dashed #eee;
-}
-.course-card .features li i {
-    color: var(--color-primary);
-    margin-right: 10px;
-}
-.btn-cta-card {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-}
-.secondary-cta {
-    background: var(--color-text);
-    color: var(--color-white);
-}
 
 /* -------------------------------------- */
-/* 6. GIỚI THIỆU THẦY KIÊN */
+/* 6. KHU VỰC VIDEO (PHẦN 3 MỚI) */
+/* -------------------------------------- */
+.videos-section {
+    background-color: var(--color-white);
+}
+
+.video-container {
+    max-width: 900px; /* Giới hạn chiều rộng video */
+    margin: 0px auto 40px auto; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* CSS Cho YouTube Responsive - Cực kỳ quan trọng */
+.youtube-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.youtube-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.video-cta {
+    margin-top: 30px;
+}
+.text-center {
+    text-align: center;
+}
+
+
+/* -------------------------------------- */
+/* 7. GIỚI THIỆU THẦY KIÊN (PHẦN 4 MỚI) */
 /* -------------------------------------- */
 .about-teacher-section {
     padding: 80px 0;
@@ -293,29 +278,85 @@ body {
     display: inline-block;
     margin-right: 15px;
     padding: 5px 10px;
-    background-color: rgba(211, 47, 47, 0.1); /* Màu đỏ nhạt */
+    background-color: rgba(211, 47, 47, 0.1); 
     border-radius: 5px;
     color: var(--color-primary);
     font-weight: 500;
 }
-.video-container {
-    max-width: 800px; /* GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
-    margin: 40px auto; /* Canh giữa và tạo khoảng cách */
+
+
+/* -------------------------------------- */
+/* 8. KHU VỰC KHÓA HỌC (PHẦN 5 MỚI) */
+/* -------------------------------------- */
+.courses-section {
+    padding: 60px 0;
+}
+.course-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background-color: var(--color-white);
+    border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+}
+.featured-card {
+    border: 4px solid var(--color-secondary);
+    background-color: var(--color-light-bg);
+}
+.course-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+.course-card .price {
+    font-size: 1.8em;
+    color: var(--color-primary);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.course-card .features {
+    list-style: none;
+    text-align: left;
+    margin-top: 15px;
+}
+.course-card .features li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+.course-card .features li i {
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+.btn-cta-card {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+}
+.secondary-cta {
+    background: var(--color-text);
+    color: var(--color-white);
 }
 
-.video-container video {
-    width: 100%; /* Bắt buộc video chiếm 100% của khung chứa (800px) */
-    height: auto;
-    display: block;
+/* -------------------------------------- */
+/* 9. TÀI LIỆU (PHẦN 6) & LIÊN HỆ (PHẦN 7) */
+/* -------------------------------------- */
+.docs-section {
+    padding: 60px 0;
+}
+.btn-cta-docs {
+    margin-top: 20px;
 }
 
-
-/* -------------------------------------- */
-/* 7. LIÊN HỆ & FORM */
-/* -------------------------------------- */
 .contact-section {
     padding: 60px 0;
 }
@@ -355,7 +396,7 @@ body {
 
 
 /* -------------------------------------- */
-/* 8. FOOTER & FLOATING BUTTONS */
+/* 10. FOOTER & FLOATING BUTTONS */
 /* -------------------------------------- */
 .main-footer {
     background-color: var(--color-text);
@@ -385,15 +426,15 @@ body {
 }
 .phone-float {
     right: 80px;
-    background-color: #4CAF50; /* Xanh lá cây */
+    background-color: #4CAF50; 
 }
 .zalo-float {
     right: 20px;
-    background-color: #0084ff; /* Xanh Zalo */
+    background-color: #0084ff; 
 }
 
 /* -------------------------------------- */
-/* 9. MEDIA QUERIES (Responsive Design) */
+/* 11. MEDIA QUERIES (Responsive Design) */
 /* -------------------------------------- */
 @media (max-width: 992px) {
     .header-content {
@@ -432,7 +473,7 @@ body {
         display: block;
         margin: 10px 0;
     }
-
 }
+
 
 
