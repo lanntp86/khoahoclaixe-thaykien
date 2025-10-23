@@ -114,13 +114,13 @@ body {
 .hero-section {
     /* Đã sửa lỗi đường dẫn ảnh Banner */
     background: url('images/banner-vios.jpg') no-repeat center center/cover;
-    min-height: 500px;
+    min-height: 250px;
     display: flex;
     align-items: center;
     position: relative;
     color: var(--color-white);
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .hero-section::before {
     content: '';
@@ -482,6 +482,7 @@ section {
         margin: 10px 0;
     }
 }
+
 
 
 
